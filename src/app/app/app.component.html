@@ -1,0 +1,20 @@
+<!-- <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a routerLink="/posts" routerLinkActive="Active">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/admin" routerLinkActive="Active">Lista postów</a>
+                </li>
+            </ul>
+        </div>
+    </nav> -->
+
+
+<div class="content-with-fixed">
+        <a routerLink="/posts" routerLinkActive="Active">Home <span class="sr-only">(current)</span></a>
+        <a routerLink="/admin" routerLinkActive="Active">Lista postów</a>
+        <a routerLink="/baza" routerLinkActive="Active">Zarządzanie bazą</a>
+    <router-outlet></router-outlet>
+</div>

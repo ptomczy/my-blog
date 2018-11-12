@@ -1,0 +1,27 @@
+<h3>Edytor posta</h3>
+<hr>
+<div *ngIf="mode == 1"> <!-- a jak zrobić z wykorzystaniem PostEditMode.Edit?-->
+    <button type="button" (click)="deletePostButtonClicked()">Usuń post</button>
+    <hr>
+</div>
+<p>Sekcja zarządzania tagami</p>
+    <div class="col-md-4">
+        <label class="toggle" *ngFor="let tag of tagsAvailable">
+        <input type="checkbox" [checked]="tag.isSelected" (click)="changeCheckboxSelection(tag)"> {{tag.name}}
+        </label>
+    </div>
+<div>
+    <form class="container" [formGroup]="postForm">
+        <label>Tytuł posta:</label><input name="postTitle" formControlName="postTitle">
+        <br>
+        <label>Treść:</label><textarea name="postContent" formControlName="postContent"></textarea>
+    </form>
+</div>
+<hr>
+<div>
+    <button type="button" (click)="confirmationButtonClicked()">{{buttonCaption}}</button>
+</div>
+<button type="button" (click)="extrabutton()">ExtraButton</button>
+
+
+

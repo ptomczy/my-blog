@@ -1,0 +1,15 @@
+<h3>Administracja postami</h3>
+<br>
+<button type="button" class="btn btn-outline-primary" (click)="addNewPost()">Dodaj post</button>
+<hr>
+<div *ngFor="let incomingPost of (posts$ | async)">
+    <div *ngIf="selectedPost">
+        <div *ngIf="incomingPost == selectedPost">
+            <button class="btn btn-primary" (click)="editPost(incomingPost)">Edytuj</button>
+            <button class="btn btn-primary" (click)="deletePost(incomingPost)">Usuń</button>
+        </div>
+    </div>
+    <post [post]="incomingPost" [postOptions]="options" (click)="postClicked(incomingPost)"></post>
+</div>
+
+

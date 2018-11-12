@@ -1,0 +1,33 @@
+<div *ngIf="post">
+    <div>
+
+        <div *ngIf="postOptions.isTagsVisible">
+            <div class="inline" *ngFor="let tag of post.tags">
+                <button type="button" class="btn btn-secondary btn-sm" >{{tag.name}}</button>
+            </div>
+        </div>
+
+        <!-- <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col" *ngFor="let tag of post.tags">
+                        <button type="button" class="btn btn-secondary btn-sm" >{{tag.name}}</button>
+                    </th>
+                </tr>
+            </thead>
+        </table> -->
+
+        
+
+        <p>Tytuł: {{post.title}}</p>
+
+        <div *ngIf="postOptions.isContentVisible">
+            <p>Kontent: {{post.content}}</p>
+        </div>
+
+        <div *ngIf="postOptions.isCreationDateVisible">
+            <p>Data utworzenia: {{post.creationDate}}</p>
+        </div>
+        
+    </div>
+</div>
